@@ -1,0 +1,95 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #111;
+}
+
+html,body{
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+}
+.parent{
+  min-height: 100vh;
+  width: 100%;
+  background-color: rgb(113, 136, 190);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 50px;
+}
+.card{
+  background-color: #fff;
+  height: 22rem;
+  width: 20rem;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  padding: 10px;
+}
+
+
+.cover img{
+  height: 100px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  object-position: top;
+  border: solid 5px #fff;
+}
+
+.top img{
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  top: 22%;
+  left: 10%;
+  border: solid 5px #fff;
+}
+.center{
+  margin: 0 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.center h1{
+  font-size: 1em;
+  margin-top: 4.3rem;
+}
+.center small{
+  font-size: 0.7em;
+  color: grey;
+  margin-top: 0.4rem;
+}
+
+.bottom{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+
+
+
+.NumText h1{
+  font-size: 1rem;
+}
+
+.NumText p{
+  font-size: 0.7em;
+  color: grey;
+}
+
+.buttons{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 0.5rem;
+  margin-bottom: 10px;
+}
