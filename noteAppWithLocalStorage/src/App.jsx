@@ -50,7 +50,7 @@ const App = () => {
   return (
     <div className="min-h-screen w-full bg-[#f8fafc] font-sans flex flex-col md:flex-row">
       {/* LEFT SIDE: Input Panel (Sticky on Desktop) */}
-      <aside className="w-full md:w-[350px] lg:w-[400px] bg-white border-r border-slate-200 p-8 flex flex-col shadow-sm md:h-screen md:sticky md:top-0">
+      <aside className="w-full md:w-87.5 lg:w-100 bg-white border-r border-slate-200 p-8 flex flex-col shadow-sm md:h-screen md:sticky md:top-0">
         <div className="mb-10">
           <h1 className="text-2xl font-extrabold text-slate-800 tracking-tight">
             Quick Notes
@@ -135,7 +135,7 @@ const App = () => {
                 >
                   <div>
                     <div className="h-1 w-12 bg-indigo-500 rounded-full mb-4"></div>
-                    <h3 className="text-lg font-bold text-slate-800 break-words mb-2 group-hover:text-indigo-600 transition-colors">
+                    <h3 className="text-lg font-bold text-slate-800 wrap-break-words mb-2 group-hover:text-indigo-600 transition-colors">
                       {elem.title}
                     </h3>
                     <p className="text-slate-600 text-sm leading-relaxed line-clamp-4">
