@@ -11,7 +11,6 @@ const App = () => {
     setUser(data)
     setCurrentIndex(0)
   }
-  // console.log(user);
 
   const showNextUser = () => {
     setCurrentIndex(prev => prev + 1)
@@ -33,15 +32,15 @@ if (user.length === 0) {
     <div className="min-h-screen bg-[#0f172a] flex items-center justify-center p-4 font-sans">
       
       {/* CARD CONTAINER */}
-      <div className="relative group w-full max-w-[380px]">
+      <div className="relative group w-full max-w-95">
         
         {/* Glow Effect behind card */}
-        <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+        <div className="absolute -inset-1 bg-linear-to-r from-cyan-500 to-blue-600 rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
         
         <div className="relative bg-[#1e293b] border border-slate-700 rounded-3xl overflow-hidden shadow-2xl">
           
           {/* Cover Section */}
-          <div className="h-28 bg-gradient-to-br from-slate-800 to-slate-900 flex items-end justify-center">
+          <div className="h-28 bg-linear-to-br from-slate-800 to-slate-900 flex items-end justify-center">
              {/* Profile Image Circle */}
              <div className="w-24 h-24 rounded-full border-4 border-[#1e293b] bg-slate-700 -mb-12 overflow-hidden shadow-xl">
                 <img 
