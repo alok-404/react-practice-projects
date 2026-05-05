@@ -2,9 +2,12 @@ import React, { useEffect, useState } from 'react'
 import { AlertCircle, Play, Star, Zap } from "lucide-react";
 import SkeletonCard from "./SkeletonCard";
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 
 const Home = () => {
+
+  const navigate = useNavigate();
 
  const [anime, setAnime] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -65,8 +68,9 @@ const Home = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-8">
             {anime.map((item) => (
               <div
+              onClick={() => navigate(`/anime/${item.mal_id}`)}
                 key={item.mal_id}
-                className="group bg-slate-900/50 rounded-3xl overflow-hidden border border-slate-800 hover:border-amber-400/50 transition-all duration-500 flex flex-col"
+                className="group cursor-pointer active:scale-90 bg-slate-900/50 rounded-3xl overflow-hidden border border-slate-800 hover:border-amber-400/50 transition-all duration-500 flex flex-col"
               >
                 <div className="relative aspect-3/4 overflow-hidden">
                   <img
