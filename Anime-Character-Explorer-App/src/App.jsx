@@ -4,6 +4,7 @@ import NavBar from "./NavPage/NavBar";
 import Home from "./components/Home";
 import { Route, Routes } from "react-router-dom";
 import { AnimeDetail } from "./components/AnimeDetail";
+import SearchPage from "./components/SearchPage";
 
 const App = () => {
  
@@ -15,6 +16,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/anime/:id" element={<AnimeDetail  />} />
+        <Route path="/search" element={<SearchPage />} />
       </Routes>
     </div>
   );
