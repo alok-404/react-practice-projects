@@ -77,7 +77,10 @@ const navigate = useNavigate()
       <div className="flex gap-2 mt-3 ml-1">
         <span className="text-[10px] font-bold text-slate-600 uppercase tracking-widest mt-1">Hot:</span>
         {['Naruto', 'One Piece', 'Solo Leveling'].map((item) => (
-          <button key={item} className="text-[10px] font-bold text-slate-400 hover:text-amber-400 transition-colors bg-slate-900 px-2 py-1 rounded-md border border-slate-800">
+          <button
+          onClick={() => {setQuery(item)}
+          }
+          key={item} className="text-[10px] font-bold text-slate-400 hover:text-amber-400 transition-colors bg-slate-900 px-2 py-1 rounded-md border border-slate-800">
             {item}
           </button>
         ))}
