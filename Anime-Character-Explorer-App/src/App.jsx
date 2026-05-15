@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import { Route, Routes } from "react-router-dom";
 import { AnimeDetail } from "./components/AnimeDetail";
 import SearchPage from "./components/SearchPage";
+import FavouritePage from "./components/FavouritePage";
 
 const App = () => {
  
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/anime/:id" element={<AnimeDetail  />} />
         <Route path="/search" element={<SearchPage />} />
+        <Route path="/favorites" element={<FavouritePage />} />
       </Routes>
     </div>
   );

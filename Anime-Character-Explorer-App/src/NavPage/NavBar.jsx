@@ -1,16 +1,22 @@
 import React from 'react'
 import { AlertCircle, Play, Star, Zap } from "lucide-react";
 import Search from '../components/Search';
+import { useNavigate } from 'react-router-dom';
 
 
 const NavBar = () => {
 
+  const navigate = useNavigate();
 
 
   return (
          <div className=" max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 mb-16">
-        <div>
-          <h1 className="text-5xl font-black tracking-tighter">
+        <div
+        
+        onClick={()=>{
+          navigate("/")
+        }}>
+          <h1 className="cursor-pointer text-5xl font-black tracking-tighter">
             EXPLORE <span className="text-amber-400">ANIME</span>
           </h1>
           <p className="text-slate-400 mt-2 font-medium italic">
@@ -26,11 +32,12 @@ const NavBar = () => {
       {/* 3. Action Button (Right) */}
       <div className="shrink-0">
         <button
+        onClick={() => navigate("/favorites")}
           className="group relative flex items-center gap-3 bg-amber-400 hover:bg-amber-500 text-black font-black px-10 py-4 rounded-2xl transition-all shadow-[0_0_20px_rgba(251,191,36,0.3)] hover:scale-105 active:scale-95"
         >
           <Zap size={20} className="group-hover:animate-bounce" />
           <span className="text-lg uppercase tracking-wider">
-            Top Anime
+            Go to favorites
           </span>
         </button>
       </div>
